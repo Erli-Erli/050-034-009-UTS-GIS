@@ -9,7 +9,6 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-
     BottomNavigationView bottomNavigationView;
    private BottomNavigationView.OnNavigationItemReselectedListener navigation = new BottomNavigationView.OnNavigationItemReselectedListener() {
        @Override
@@ -17,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
            Fragment f = null;
            switch (item.getItemId()){
                case R.id.home:
-                   f = new BlankFragment();
+                   f = new MapsFragment2();
                    break;
                case R.id.dasbord:
                    f = new MapsFragment();
                    break;
                case R.id.search:
-                   f = new MapsFragment2();
+                   f = new BlankFragment();
                    break;
            }
            getSupportFragmentManager().beginTransaction().replace(R.id.container,f).commit();

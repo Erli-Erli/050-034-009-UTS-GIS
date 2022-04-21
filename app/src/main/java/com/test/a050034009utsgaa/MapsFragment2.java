@@ -2,12 +2,16 @@ package com.test.a050034009utsgaa;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,6 +34,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.util.List;
+
 public class MapsFragment2 extends Fragment implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -45,7 +52,6 @@ public class MapsFragment2 extends Fragment implements
     Marker mCurrLocationMarker;
     double latitude, longitude;
 
-
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
         /**
@@ -60,6 +66,7 @@ public class MapsFragment2 extends Fragment implements
         @Override
         public void onMapReady(GoogleMap googleMap) {
             mMap = googleMap;
+
             mMap.getUiSettings().setMyLocationButtonEnabled(true);
             mMap.getUiSettings().setZoomControlsEnabled(true);
             mMap.getUiSettings().setCompassEnabled(true);
@@ -83,7 +90,8 @@ public class MapsFragment2 extends Fragment implements
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_maps, container, false);
+        View a = inflater.inflate(R.layout.fragment_maps2, container, false);
+        return a;
     }
 
     @Override
