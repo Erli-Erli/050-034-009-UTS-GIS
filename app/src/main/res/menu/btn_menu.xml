@@ -5,16 +5,16 @@
     <item
         android:id="@+id/home"
     android:icon="@drawable/ic_baseline_home_24"
-    android:title="Home"/>
+    android:title="Lokasi Saat Ini"/>
 
     <item
         android:id="@+id/dasbord"
         android:icon="@drawable/ic_baseline_dashboard_24"
-        android:title="dasbord"/>
+        android:title="Pencarian Lokasi"/>
     <item
         android:id="@+id/search"
-        android:icon="@drawable/ic_baseline_search_24"
-        android:title="search"/>
+        android:icon="@drawable/ic_vector"
+        android:title="Titik Lokasi Sekarang"/>
 
 
 
